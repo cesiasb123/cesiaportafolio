@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <title>나의 포트폴리오2023_Cesia</title>
+    <style>
+   
+      .snow {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #fff;
+        animation: snowfall 5s linear infinite;
+    }
+
+      @keyframes snowfall {
+          to {
+              transform: translateY(100vh);
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+
+      <header>
+          <h3>2023 웹표준 수업 과제물 정리_Cesia</h3>          
+      </header>
+      <nav class="menu">
+        <ul>
+          <li><a href="sub1/sub1.html" target="_blank">VISIT KOREA </a></li>
+          <li><a href="sub2/sub2.html" target="_blank">GUCCI</a></li>
+          <li><a href="sub3/sub3.html" target="_blank">ROSALIA</a></li>
+          <li><a href="sub4/sub4.html" target="_blank">DANNA PAOLA</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        My Portfolio
+      </main>
+
+      <footer>
+        Made by Cesia in 2023. &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;  email : cesia_soplin@kbu.kr.ac
+      </footer>
+
+      <script>
+   
+          document.addEventListener("mousemove", (event) => {
+          createSnowflake(event.clientX, event.clientY);
+        });
+
+        function createSnowflake(x, y) {
+            const snowflake = document.createElement("div");
+            snowflake.className = "snow";
+            snowflake.style.left = `${x}px`;
+            snowflake.style.top = `${y}px`;
+            document.body.appendChild(snowflake);
+
+       
+            snowflake.addEventListener("animationiteration", () => {
+                snowflake.remove();
+            });
+        }
+      </script>
+
+    </div>
+  </body>
+</html>

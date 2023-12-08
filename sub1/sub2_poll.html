@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+    <title> 폼 만들기_설문조사 </title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+       
+       fieldset{
+            width: 600px;
+            margin: auto;
+            border: 1px solid #757575;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px 50px;
+        }
+        
+        input, textarea{
+            padding: 5px;
+            margin: 5px;
+            border: 0.5px solid rgb(143, 100, 253);
+            border-radius: 10px;
+        }
+        select{ width: 150px;}
+
+        label{
+            font-weight: 800;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h2>Questionnaire survey</h2>
+        </header>
+
+        <main>
+            <form name="설문" action="">
+                <fieldset>
+                    <label for="">Name &nbsp;  : </label>
+                    <input type=“text” size=20>
+
+                    &nbsp;&nbsp; <label for="">Sex &nbsp;  : </label>
+                    <input type=radio name=sex value=male> M&nbsp;&nbsp; <input type=radio name=sex value=female> F<br>
+
+                    <label for="">Birthday : </label>
+                    <input type=“text” size=18><br>
+
+                    <label for="">E-mail : </label>
+                    <input type=email placeholder=comgild@nate.com required><br>
+
+                    <label for="">Adress &nbsp;  : </label>
+                    <input type=“text” size=72> <br><br>
+
+                    <label for="">1. How did you know about Korea?</label><br>
+                    <input type=checkbox name=hobby1 value=v1> K-pop <br>
+                    <input type=checkbox name=hobby2 value=v2> K-dramas <br>
+                    <input type=checkbox name=hobby3 value=v3> Social media <br>
+                    <input type=checkbox name=hobby4 value=v4> Tv <br><br>
+                    
+
+                    <label for="">2. Main Purpose of Visiting Korea</label><br>
+                    <input type=radio name=alcohol value=v1> Interested in Korean culture <br>
+                    <input type=radio name=alcohol value=v2> Korean technology and development <br>
+                    <input type=radio name=alcohol value=v3> K-dramas and k-idols <br><br> 
+
+                    <label for="">3. How are you preparing to coming to Korea?</label>
+                    <select name="hobby" size=1>
+                        <option>Saving money</option>
+                        <option>Learning Korean</option>
+                        <option selected>Planning schedule</option>
+                        <option>Looking for plane ticket</option>
+                        <option>기타</option>
+                    </select><br><br>
+
+                    <label for="">4. Place that you would like to visit first</label><br>
+                    <select name="interest" size=6 multiple>
+                        <option value="1" selected>Busan</option>
+                        <option value="2">Nami Island</option>
+                        <option value="3">Seoul Tower</option>
+                        <option value="4">Hongdae</option>
+                        <option value="5">Kyungbok-gung palace</option>
+                        <option value="6">Hang-gang river</option>
+                    </select><br><br>
+
+                    <label for="">5. When are you planning to visit Korea?</label>
+                    <input type="date"><br><br>
+
+                    <label for="">6. What do you expect from our company?</label><br>
+                    <textarea name="introduction" cols=90 rows=8></textarea><br>
+
+                    <input type=submit value="Accept" class="btn" > 
+                    <input type=reset value="Again" class="btn" > 
+                </fieldset>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
